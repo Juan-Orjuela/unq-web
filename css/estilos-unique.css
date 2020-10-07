@@ -10,11 +10,15 @@ html {
 }
 body {
     font-family: 'Open Sans', sans-serif;
-   
+   color: black;
 }
 h1, h2, h3, h4, h5, h6 {
      font-family: 'Playfair Display', serif;
-     font-weight: 600;
+     font-weight: 600 !important;
+     line-height: .9 !important;
+}
+.h1 {
+  font-size: 5rem;
 }
 a {
     transition: all .5s ease;
@@ -34,11 +38,40 @@ img.bn-c:hover {
     -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
     filter: grayscale(0);
 }
+.contenido {
+  min-height: 100vh;
+  margin-left: 275px;
+  display: flex;
+  position: relative;
+}
+.btn-seccion {
+  position: absolute;
+  display: block;
+  top:  50%;
+  right: 8.6%;
+  border: 1px solid white;
+  width: 90px;
+  height: 45px;
+  z-index: 2;
+}
+.btn-seccion:hover {
+  background-color: black;
+}
+.btn-seccion img {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  transition: all .5s ease;
+}
+.btn-seccion:hover img {
+  left: 80%;
+}
 /*Menu*/
 #menu {
     position: fixed;
     z-index: 2;
-    background: #ff000066;
     top: 0;
     left: 0;
     width: 275px;
@@ -67,10 +100,11 @@ img.bn-c:hover {
 #fp-menu .nav-item a {
     display: flex;
     flex-direction: column;
-    color: black;
+    color: white;
     font-size: 0.875rem;
 }
-#fp-menu .nav-item a:hover {
+#fp-menu .nav-item a:hover,
+#fp-menu .nav-item.active a {
     color: #c3e5e1;
 }
 #fp-menu .num {
@@ -79,13 +113,57 @@ img.bn-c:hover {
 #fp-menu .linea {
     width: 16px;
     height: 3px;
-    background: black;
+    background: white;
 }
+body.fp-viewing-zonas #fp-menu .nav-item a,
+body.fp-viewing-descripcion #fp-menu .nav-item a {
+  color: #8e8e8e;
+}
+body.fp-viewing-zonas #fp-menu .nav-item a:hover,
+body.fp-viewing-descripcion #fp-menu .nav-item a:hover {
+  color: #000000;
+}
+body.fp-viewing-zonas #fp-menu .nav-item .linea,
+body.fp-viewing-descripcion #fp-menu .nav-item .linea {
+  background-color: #8e8e8e
+}
+body.fp-viewing-zonas #fp-menu .nav-item.active a {
+  color: #000000;
+}
+
 /*
 ==================
 HOME
 ==================
 */
+/*cambios de color*/ 
+body {
+  transition: background-color 2s ease;
+}
+body.fp-viewing-inicio {
+  background-color: #ffffff;
+}
+body.fp-viewing-zonas {
+  background-color: #d9d9d9;
+}
+body.fp-viewing-descripcion {
+  background-color: #b3b3b3;
+}
+body.fp-viewing-smart-lofts {
+  background-color: #8c8c8c;
+}
+body.fp-viewing-acabados {
+  background-color: #666666;
+}
+body.fp-viewing-diseno {
+  background-color: #404040;
+}
+body.fp-viewing-ubicacion {
+  background-color: #1a1a1a;
+}
+body.fp-viewing-sala {
+  background-color: #000000;
+}
 body.fp-viewing-inicio #menu {
     opacity: 0;
     pointer-events: none;
@@ -95,9 +173,7 @@ body.fp-viewing-inicio #menu {
     position: relative;
  }
 
-#inicio-unq {
-    background-color: gray;
-}
+
 #inicio-unq .container-fluid {
     min-height: 100vh;
     display: flex;
@@ -106,12 +182,14 @@ body.fp-viewing-inicio #menu {
     margin-right: 0;
     position: relative;
 }
+#inicio-unq .col-9 {
+  padding-right: 0;
+}
 #inicio-unq .cont-img {
     position: relative;
     height: 100vh;
-    margin-right: -15px;
-    background: red;
     width: 100%;
+    overflow: hidden;
 }
 #inicio-unq .cont-img img {
     object-fit: cover;
@@ -330,4 +408,43 @@ input[type="submit"]:hover {
 .custom-control-input:checked~.custom-control-label::before {
     color: #fff;
     background-color: #c3e5e1;
+}
+/*Fila zonas*/
+
+.linea {
+  display: block;
+}
+#zonas-unq .contenido .container-fluid {
+  display: flex;
+  align-items: center;
+}
+#zonas-unq .contenido .container-fluid .row {
+  width: 100%;
+  margin: 0 ;
+}
+#zonas-unq  .muestra{
+  background: url(../img/zonas/inicio-zonas-muestra.jpg) left center;
+  background-size: cover;
+  position: absolute;
+  width: 8.6%;
+  width: calc(8.6% + 65px);
+  height: 100%;
+  right: 0;
+}
+#zonas-unq .col-6:first-child {
+  padding-left: 0;
+}
+#zonas-unq .col-6:last-child {
+  display: flex;
+  flex-direction: column;
+  padding-right: 15%;
+  justify-content:space-around
+}
+#zonas-unq .linea {
+  width: 46px;
+  height: 12px;
+  background: black;
+}
+#zonas-unq .h1 {
+  margin-left: -45%;
 }
