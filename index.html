@@ -203,7 +203,7 @@
                                     <li>Una dotación de scooters y bicicletas eléctricas esperan a aquellos que piensan diferente.</li>
                                     <li>El confort llega a un nuevo nivel cuando se cuenta con un servicio exclusivo de valet parking.</li>
                                 </ul>
-                                <a href="#sala-unq" class="btn btn-bajar-rg">SALA DE VENTAS</a>
+                                <a id="irSala" href="#sala" class="btn btn-bajar-rg">SALA DE VENTAS</a>
                             </div>
                             <div class="col-6">
                                 <img src="img/unique-ubicacion.jpg" srcset="img/unique-ubicacion.jpg 1x, img/unique-ubicacion@2x.jpg 2x" alt="Ubicación Unique" class="bn-c">
@@ -810,6 +810,9 @@
         //Desplegar Footer
         $('#btn-footer').on('click',function(){
             $('#footer').toggleClass('activo');
+        });
+        $(document).on('click', '#irSala', function(){
+            fullpage_api.moveSectionDown();
         });
     </script>
 
