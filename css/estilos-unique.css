@@ -1288,7 +1288,7 @@ ZONAS
 }
 /*
 ==========================
-ZONAS
+ACABADOS
 ==========================
 */
 #pag-acabados {
@@ -1340,4 +1340,42 @@ ZONAS
 #cont-acabados .galeria-unique li {
     display: flex;
     background-color: white;
+}
+/*
+==========================
+DISEÑO
+==========================
+*/
+#pag-diseno {
+    background-color: #1f1f1f;
+}
+#cont-diseno {
+    margin-left: 275px;
+    width: calc(100vw - 275px);
+    background-color: white;
+
+}
+
+#cont-diseno .slick-prev {
+    left: 40px;
+}
+#cont-diseno .slick-next {
+    left: 100px;
+}
+#cont-diseno .slick-next.slick-disabled, 
+#cont-diseno .slick-prev.slick-disabled,
+#cont-diseno .galeria-unique li:before {
+    display: none !important;
+}
+#cont-diseno .btn-seccion-rg {
+    position: absolute;
+    z-index: 3;
+    right: 90px;
+    bottom: 90px;
+   width: 240px;
+   background: white;
+   border: none;
+}
+#cont-diseno .btn-seccion-rg:hover {
+    background: black;
 }
