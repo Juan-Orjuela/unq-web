@@ -72,7 +72,13 @@ img.bn-c:hover {
     display: flex;
     position: relative;
 }
+.btn {
+    font-size: .875rem;
+}
 
+.btn:focus {
+    box-shadow: none;
+}
 .btn-seccion {
     position: absolute;
     display: block;
@@ -1299,6 +1305,7 @@ ACABADOS
     width: calc(100vw - 275px);
     background-color: white;
 
+
 }
 #cont-acabados .cont-info {
     background: white;
@@ -1353,7 +1360,7 @@ DISEÑO
     margin-left: 275px;
     width: calc(100vw - 275px);
     background-color: white;
-
+    
 }
 
 #cont-diseno .slick-prev {
@@ -1378,4 +1385,79 @@ DISEÑO
 }
 #cont-diseno .btn-seccion-rg:hover {
     background: black;
+}
+/*
+==========================
+SMART LOFTS 
+==========================
+*/
+#pag-smart-lofts {
+    background-color: #1f1f1f;
+}
+#cont-smart-lofts {
+    margin-left: 275px;
+    width: calc(100vw - 275px);
+    min-height: 100vh;
+
+
+}
+#cont-smart-lofts .row {
+     min-height: 100vh;
+}
+#cont-smart-lofts .cont-img {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    max-height: 100vh;
+}
+#cont-smart-lofts .cont-img img {
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+}
+
+#cont-smart-lofts .cont-info {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30vh;
+    padding-left: 5%;
+     padding-right: 5%;
+     position:relative
+}
+#cont-smart-lofts .cont-info h1 {
+    margin-bottom: 4rem;
+}
+#cont-smart-lofts .cont-info h1 + p {
+    margin-bottom: 10vh;
+    max-width: 480px;
+}
+#cont-smart-lofts .absolute {
+    top: 10%;
+    z-index: 2;
+    left: calc(10% + 480px);
+    
+}
+#cont-smart-lofts .dropdown .btn {
+    border-color: white;
+    color:white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+     width: 210px;
+}
+.dropdown-menu {
+    border-radius: 0;
+    background: transparent;
+    border: 1px solid white;
+    padding: 0;
+    width: 210px;
+}
+.dropdown-menu a {
+    color: white;
+    border-bottom: 1px solid white;
+    text-align: center;
+    font-size: .875rem;
+}
+.dropdown-menu a:last-child {
+    border: none
 }
