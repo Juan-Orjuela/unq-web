@@ -1707,7 +1707,13 @@ body.fp-viewing-apto-relacioandos  #menu-apto li.active a:before {
     transform: translateY(-50%);
     transition: all .5s ease;
 }
-
+.iframe-placeholder img {
+    filter: grayscale(100%);
+    transition: all .5s ease;
+}
+.iframe-placeholder:hover img {
+    filter: grayscale(0%);
+}
 .iframe-placeholder:hover span {
     color: white;
     background: #000000;
