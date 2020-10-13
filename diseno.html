@@ -653,6 +653,11 @@
             </div>
         </div>
     </div><!-- /#pop-registro -->
+    <!-- CAPAS -->
+    <div class="capa capa-1"></div>
+    <div class="capa capa-2"></div>
+    <div class="capa capa-3"></div>
+    <div class="capa capa-4"></div>
     <!-- SCRIPTS -->
     <!-- Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -689,7 +694,28 @@
             speed: 600,
             infinite: false
         })
-        
+        //Transiciones
+        $(".navbar-brand, .btn-seccion-rg").on("click", redirigir);
+
+        function redirigir(e) {
+            e.preventDefault();
+            var link = $(this).attr("href");
+            //var linkB = link.substr(0, link.indexOf('.'));
+
+            var delay = 3000; // time in milliseconds
+            $(".capa").addClass('activo');
+            
+            setTimeout(function () {
+                window.location = link;
+            }, delay);
+
+        }
+        //redirigir
+        $(document).ready(function (){
+            setTimeout(function () {
+                $(".capa").addClass('cargado');
+            }, 1000);
+        });
     </script>
 
 
