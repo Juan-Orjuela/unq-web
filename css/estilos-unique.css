@@ -305,63 +305,65 @@ body.fp-viewing-zonas #fp-menu .nav-item.active a {
 }
 
 /*Menu interno*/
-.pag-interna #menu {
-    transition: all .8s ease;
-}
+@media and (min-width: 992px) {
+    .pag-interna #menu {
+        transition: all .8s ease;
+    }
 
-.pag-interna .navbar-collapse {
-    align-items: flex-start;
-}
+    .pag-interna .navbar-collapse {
+        align-items: flex-start;
+    }
 
-.pag-interna #fp-menu {
-    min-width: 184px;
-    transition: all .8s ease;
-    height: auto;
-    margin-top: 10vh;
-}
+    .pag-interna #fp-menu {
+        min-width: 184px;
+        transition: all .8s ease;
+        height: auto;
+        margin-top: 10vh;
+    }
 
-.pag-interna #fp-menu .num, .pag-interna #fp-menu .linea, .pag-interna #fp-menu .label {
-    opacity: 0;
-    transition: all .8s ease;
-}
+    .pag-interna #fp-menu .num, .pag-interna #fp-menu .linea, .pag-interna #fp-menu .label {
+        opacity: 0;
+        transition: all .8s ease;
+    }
 
-.pag-interna #fp-menu .nav-item {
-    height: 15px;
-    transition: height .4s ease;
-}
+    .pag-interna #fp-menu .nav-item {
+        height: 15px;
+        transition: height .4s ease;
+    }
 
-.pag-interna #fp-menu .nav-item.activo, .pag-interna #fp-menu:hover .nav-item {
-    height: 80px;
-}
+    .pag-interna #fp-menu .nav-item.activo, .pag-interna #fp-menu:hover .nav-item {
+        height: 80px;
+    }
 
-.pag-interna #fp-menu .nav-item.activo:first-child, .pag-interna #fp-menu:hover .nav-item:first-child {
-    height: 100px;
-}
+    .pag-interna #fp-menu .nav-item.activo:first-child, .pag-interna #fp-menu:hover .nav-item:first-child {
+        height: 100px;
+    }
 
-.pag-interna #fp-menu .nav-item.activo .num, .pag-interna #fp-menu .nav-item.activo .linea, .pag-interna #fp-menu .nav-item.activo .label, .pag-interna #fp-menu:hover .num, .pag-interna #fp-menu:hover .linea, .pag-interna #fp-menu:hover .label {
-    opacity: 1;
-}
+    .pag-interna #fp-menu .nav-item.activo .num, .pag-interna #fp-menu .nav-item.activo .linea, .pag-interna #fp-menu .nav-item.activo .label, .pag-interna #fp-menu:hover .num, .pag-interna #fp-menu:hover .linea, .pag-interna #fp-menu:hover .label {
+        opacity: 1;
+    }
 
-.pag-interna #fp-menu .linea {
-    width: 3px;
-    height: 3px;
-    box-shadow: 0 0 0 1px white;
-    background: white;
-    border-radius: 100%;
-    opacity: 1;
-    transition: initial;
-}
+    .pag-interna #fp-menu .linea {
+        width: 3px;
+        height: 3px;
+        box-shadow: 0 0 0 1px white;
+        background: white;
+        border-radius: 100%;
+        opacity: 1;
+        transition: initial;
+    }
 
-.pag-interna #fp-menu:hover .linea {
-    width: 16px;
-    height: 3px;
-    border-radius: 0;
-    box-shadow: none;
-    transition: width .3s linear;
-}
+    .pag-interna #fp-menu:hover .linea {
+        width: 16px;
+        height: 3px;
+        border-radius: 0;
+        box-shadow: none;
+        transition: width .3s linear;
+    }
 
-.pag-interna #fp-menu .nav-item.activo {
-    pointer-events: none;
+    .pag-interna #fp-menu .nav-item.activo {
+        pointer-events: none;
+    }
 }
 
 /*Footer*/
@@ -1961,6 +1963,34 @@ RESPONSIVE
     #ubicacion-unq .row > div:first-child {
         right: 0;
     }
+
+    #menu-zonas ul li.active a {
+        font-size: 1.1rem;
+    }
+
+    #menu-zonas ul li {
+        padding-left: 20px;
+    }
+
+    /*
+    =====
+    PAG ZONAS
+    */
+    .pag-interna #fp-menu {
+        margin-top: 2vh;
+        padding-left: 30px
+    }
+
+    .pag-interna #fp-menu .nav-item a {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .galeria-unique li h3 {
+        font-size: 1rem;
+        left: 80px;
+        bottom: 50px;
+    }
 }
 
 /*1200*/
@@ -1993,6 +2023,40 @@ RESPONSIVE
 
     .navbar-expand-lg .navbar-collapse {
         padding-bottom: 40px;
+    }
+
+    /*Registro*/
+    #pop-registro .modal-body {
+        min-height: initial;
+    }
+
+    #pop-registro .col-ico {
+        padding-bottom: 1rem;
+    }
+
+    /*PAG ZONAS*/
+    #pag-zonas #zonas-sociales-unq, #pag-zonas #zonas-entre-unq, #pag-zonas #zonas-ideas-unq {
+        width: 75%;
+    }
+
+    #menu-zonas {
+        width: 25%;
+    }
+
+    .pag-interna #fp-menu .nav-item {
+        margin-bottom: 0;
+    }
+
+    .pag-interna #fp-menu .nav-item .num {
+        line-height: 1.1
+    }
+
+    .pag-interna #fp-menu .nav-item.activo, .pag-interna #fp-menu:hover .nav-item {
+        height: 70px;
+    }
+
+    .pag-interna #fp-menu .nav-item.activo:first-child, .pag-interna #fp-menu:hover .nav-item:first-child {
+        height: 90px;
     }
 }
 
@@ -2086,7 +2150,7 @@ RESPONSIVE
 
     .navbar-toggler-icon {
         position: relative;
-        margin-right: 30px;
+        margin-right: 5px;
         width: 20px!important;
         height: 20px;
     }
@@ -2233,12 +2297,16 @@ RESPONSIVE
         transform-origin: initial;
     }
 
+    .pag-interna #contacto {
+        bottom: 50px;
+    }
+
     #contacto li {
         width: 45%;
         text-align: center;
     }
 
-    #footer {
+    body:not('.pag-interna') #footer {
         position: relative;
         bottom: 0;
         background: black;
@@ -2255,6 +2323,90 @@ RESPONSIVE
     #footer-responsive {
         display: block;
         padding-bottom: 60px
+    }
+
+    /*
+    =======
+    ZONAS
+    =======
+    */
+    #menu-zonas {
+        width: 100%;
+        height: initial;
+        bottom: 0;
+        top: initial;
+        padding-bottom: 120px;
+    }
+
+    #menu-zonas ul {
+        flex-direction: row;
+        height: initial;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+    }
+
+    #menu-zonas ul li {
+        padding-left: 0;
+    }
+
+    #menu-zonas .btn-seccion-rg {
+        max-width: 250px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #menu-zonas ul li:last-child:after {
+        content: "";
+        height: 1px;
+        position: absolute;
+        background: black;
+        width: 90vw;
+        left: initial;
+        right: 100%;
+        bottom: -17px;
+        z-index: -1;
+    }
+
+    #menu-zonas ul li:before {
+        content: "";
+        position: absolute;
+        top: initial;
+        bottom: -20px;
+        left: 0;
+        height: 7px;
+        width: 20px;
+        border: 1px solid black;
+        background: white;
+    }
+
+    #pag-zonas #zonas-sociales-unq, #pag-zonas #zonas-entre-unq, #pag-zonas #zonas-ideas-unq {
+        width: 100%;
+    }
+
+    #pag-zonas .cont-galeria-unique {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding-top: 70px;
+    }
+
+    #pag-zonas .cont-galeria-unique .galeria-unique li {
+        height: calc(100vh - 320px);
+        width: 100%;
+        padding: 0;
+        min-width: 100vw;
+    }
+
+    #menu-zonas .absolute {
+        display: none
+    }
+
+    .galeria-unique li h3 {
+        left: 30px;
+    }
+
+    #pag-zonas .slick-next, #pag-zonas .slick-prev {
+        bottom: 60px
     }
 }
 
@@ -2762,7 +2914,7 @@ RESPONSIVE
     #diseno-unq .contenido .container-fluid .row {
         margin-left: -15px;
         margin-right: -15px;
-        flex-direction:row-reverse;
+        flex-direction: row-reverse;
         justify-content: space-between;
         flex-wrap: nowrap;
         flex-grow: 2;
@@ -2771,19 +2923,18 @@ RESPONSIVE
     #diseno-unq .col-6 {
         padding: 0;
     }
+
     #diseno-unq .col-6:first-child {
         min-height: 100vh;
         position: relative;
         margin: 0;
-        
-        
     }
+
     #diseno-unq .col-6:first-child img {
         width: 100%;
         height: 100%;
         margin: 0;
-        object-fit:cover;
-
+        object-fit: cover;
     }
 
     #diseno-unq ul {
@@ -2791,6 +2942,7 @@ RESPONSIVE
         width: 75vw;
         margin-left: 0;
     }
+
     #diseno-unq .h1 {
         position: relative;
         left: 0.5em;
@@ -2798,28 +2950,35 @@ RESPONSIVE
         transform-origin: bottom left;
         transform-style: preserve-3D;
     }
+
     #diseno-unq li {
         font-size: .8rem;
     }
+
     /*Ubicacion*/
     #ubicacion-unq .linea {
         display: none
     }
+
     #ubicacion-unq .h1 {
         width: 50%;
     }
+
     #ubicacion-unq ul {
         padding: 10px 10px 10px 32px;
         width: 57%;
         margin-left: -3%;
         margin-right: ;
     }
+
     #ubicacion-unq ul li:last-child {
         margin: 0;
     }
+
     #ubicacion-unq .row {
         padding-top: 50px;
     }
+
     #ubicacion-unq li {
         font-size: .8rem;
     }
