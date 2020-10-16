@@ -2405,8 +2405,16 @@ RESPONSIVE
         left: 30px;
     }
 
+    .galeria-unique li img {
+        min-height: calc(100vh - 300px);
+    }
+
     #pag-zonas .slick-next, #pag-zonas .slick-prev {
         bottom: 60px
+    }
+
+    .pag-interna .nav-item.activo .nav-link {
+        color: #c3e5e1 !important;
     }
 }
 
@@ -2811,10 +2819,15 @@ RESPONSIVE
     #sala-unq .cont-data p:last-child {
         margin: 0;
     }
+
 }
 
 /*480*/
 @media screen and (max-width: 480px) {
+    #menu .nav-item .nav-link {
+        
+        margin-left: 15px;
+    }
     #contacto {
         height: 30px;
     }
@@ -2981,5 +2994,40 @@ RESPONSIVE
 
     #ubicacion-unq li {
         font-size: .8rem;
+    }
+
+    /*PAG ZONAS*/
+    #menu-zonas {
+        padding-bottom: 100px;
+    }
+
+    #pag-zonas .cont-galeria-unique .galeria-unique li {
+        height: calc(100vh - 300px);
+    }
+
+    .galeria-unique li img {
+        min-height: calc(100vh - 300px);
+    }
+
+    #pag-zonas .slick-next, #pag-zonas .slick-prev {
+        bottom: 40px
+    }
+
+    .slick-next, .slick-prev {
+        height: 35px;
+        width: 35px;
+    }
+
+    .slick-next {
+        right: 15px;
+    }
+
+    .slick-prev {
+        right: 60px;
+    }
+    .galeria-unique li h3 {
+        font-size: 1.2rem;
+        bottom: 40px;
+        left: 15px;
     }
 }
