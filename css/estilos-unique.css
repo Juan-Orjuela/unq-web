@@ -1995,13 +1995,18 @@ RESPONSIVE
     /*
     PAG APTOS
     */
-    #cont-smart-lofts .cont-info h1 BR {
-        DISPLAY: NONE
+    #cont-smart-lofts .cont-info h1 br, #apto-final-unq .cont-info br {
+        display: none;
     }
 
     #cont-smart-lofts .absolute {
         top: 10%;
         left: 10%;
+    }
+
+    /*Pag Aptos detalle*/
+    #apto-final-unq .cont-info {
+        padding-top: 0;
     }
 }
 
@@ -2080,6 +2085,38 @@ RESPONSIVE
     #cont-smart-lofts .cont-img img {
         position: absolute;
         height: 100%;
+    }
+
+    /*Pag apto detalle*/
+    .pag-apto .section {
+        margin-left: 175px;
+        width: calc(100vw - 175px);
+    }
+
+    #apto-tipo-unq .container-fluid {
+        width: calc(100% - 90px);
+        margin: 0;
+    }
+
+    #menu-apto {
+        left: 175px;
+        right: 90px;
+    }
+
+    #apto-recorrido-unq .container-fluid {
+        width: calc(100% - 90px);
+    }
+
+    /*PAg acabados*/
+    #cont-acabados {
+        margin-left: 175px;
+        width: calc(100vw - 175px);
+    }
+
+    /*Pag diseño*/
+    #cont-diseno {
+        margin-left: 175px;
+        width: calc(100vw - 175px);
     }
 }
 
@@ -2457,6 +2494,100 @@ RESPONSIVE
     #cont-smart-lofts .absolute {
         top: 15%;
     }
+
+    /*Pag Apto Detalle*/
+    .pag-apto .section {
+        margin-left: 0;
+        width: 100vw;
+    }
+
+    #apto-tipo-unq .container-fluid {
+        width: 100%;
+        margin: 0;
+    }
+
+    #apto-tipo-unq .cont-info {
+        padding: 0 15px;
+    }
+
+    #menu-apto {
+        position: fixed;
+        top: 0;
+        left: 15px;
+        right: 15px;
+        margin-top: 80px;
+    }
+
+    .pag-apto .container-fluid .row {
+        padding-top: 140px;
+    }
+
+    #apto-recorrido-unq .container-fluid {
+        width: calc(100% - 60px);
+        margin: 0 auto;
+    }
+
+    #apto-final-unq .cont-info .h3 {
+        margin-bottom: 2rem;
+    }
+
+    body.fp-viewing-apto-tipo .pag-apto #fp-menu .nav-item a, body.fp-viewing-apto-galeria .pag-apto #fp-menu .nav-item a {
+        color: #ffffff;
+    }
+
+    /*Acabados*/
+    #cont-acabados {
+        margin-left: 0;
+        width: 100vw;
+    }
+
+    #cont-acabados br {
+        display: none;
+    }
+
+    #cont-acabados .col-7 {
+        width: 60%;
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+
+    #cont-acabados .col-5 {
+        width: 40%;
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    #cont-acabados .cont-info {
+        padding: 120px 15px 90px;
+        justify-content: center;
+    }
+
+    #cont-acabados .slick-prev {
+        right: initial;
+        left: 10px;
+        margin-right: 10px;
+    }
+
+    #cont-acabados .slick-next {
+        left: 60px;
+        margin-left: 10px;
+    }
+
+    #cont-acabados .absolute {
+        display: none;
+    }
+
+    /*Diseño*/
+    #cont-diseno {
+        margin-left: 0;
+        width: 100%;
+    }
+    #cont-diseno .btn-seccion-rg {
+        right: 15px;
+        bottom: initial;
+        top: 85px;
+    }
+    
 }
 
 /*768*/
@@ -2899,11 +3030,99 @@ RESPONSIVE
         width: 200px;
     }
 
+    #apto-final-unq .dropdown-menu {
+        width: 240px;
+    }
+
     #cont-smart-lofts h1 {
         background: #c3e5e1;
         padding: 30px 60px;
         margin-left: -60px;
         color: black;
+    }
+
+    /*Pag apto*/
+    .pag-apto .container-fluid .row {
+        flex-direction: column;
+    }
+
+    .pag-apto .container-fluid .row > div {
+        width: 100%;
+        max-width: initial;
+    }
+
+    #apto-tipo-unq .cont-info .h3 {
+        padding-top: 0;
+    }
+
+    #apto-tipo-unq .cont-info {
+        height: 20%;
+        flex-grow: initial;
+        flex: 0 40%;
+    }
+
+    #apto-tipo-unq .container-fluid .row > div:last-child {
+        flex-grow: 1;
+        height: 60%;
+        flex: 0 60%;
+    }
+
+    #apto-galeria-unq .slick-prev {
+        top: 50%;
+        bottom: initial;
+        left: 8px;
+    }
+
+    #apto-galeria-unq .slick-next {
+        top: 50%;
+        bottom: initial;
+        left: initial;
+        right: 8px;
+    }
+
+    #apto-recorrido-unq .container-fluid .row {
+        padding-bottom: 110px;
+    }
+
+    .your-iframe {
+        min-height: calc(100vh - 260px);
+    }
+
+    #apto-final-unq .container-fluid .row {
+        padding-bottom: 110px;
+        flex-wrap: nowrap
+    }
+
+    #apto-final-unq .container-fluid .row .col-6:first-child {
+        flex: initial;
+        height: 25vh;
+    }
+
+    #apto-final-unq .cont-img img {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    #apto-final-unq .cont-info .h3 {
+        margin-top: 1rem;
+    }
+
+    #apto-final-unq .cont-info .h3 + p {
+        margin-bottom: 1rem;
+    }
+
+    #apto-final-unq .btn-seccion-rg {
+        margin-top: 1rem;
+    }
+    /*Diseño*/
+    #cont-diseno .slick-prev {
+        left: 15px;
+        bottom: 110px;
+    }
+    #cont-diseno .slick-next {
+        left: 75px;
+        bottom: 110px; 
     }
 }
 
@@ -3142,11 +3361,50 @@ RESPONSIVE
         color: black;
         margin-bottom: 1em;
     }
+
     #cont-smart-lofts .absolute {
         display: none;
     }
+
     #cont-smart-lofts .dropdown {
         width: 200px;
         margin: 0 auto;
+    }
+
+    /*PAg Apto detalle*/
+    #apto-tipo-unq .cont-info p {
+        margin-bottom: 5px;
+    }
+
+    /*Acabados*/
+    #cont-acabados .galeria-unique li {
+        flex-direction: column;
+    }
+
+    #cont-acabados .galeria-unique li > div {
+        width: 100%;
+        flex: initial;
+        max-width: initial
+    }
+
+    #cont-acabados .galeria-unique li .col-7 {
+        height: 50vh;
+    }
+
+    #cont-acabados .cont-info h1 {
+        margin: 1rem 0 0
+    }
+
+    #cont-acabados .cont-info h1 + p {
+        margin: 1rem 0;
+    }
+
+    #cont-acabados .cont-info {
+        padding: 30px 15px 120px;
+    }
+
+    #cont-acabados .slick-prev, #cont-acabados .slick-next {
+        bottom: initial;
+        top: 90px;
     }
 }
