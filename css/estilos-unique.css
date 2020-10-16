@@ -1121,7 +1121,7 @@ body.fp-viewing-inicio #menu, body.fp-viewing-inicio #footer, body.fp-viewing-in
 
 #diseno-unq .contenido .container-fluid .row {
     width: 100%;
-    margin: 0 ;
+    margin: 0;
 }
 
 #diseno-unq .muestra {
@@ -2398,6 +2398,8 @@ RESPONSIVE
     #acabados-unq .col-6:first-child img {
         position: absolute;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -2406,7 +2408,9 @@ RESPONSIVE
     #acabados-unq .col-6:last-child {
         padding: 30px;
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
+        height: 145px;
+        position: relative;
     }
 
     #acabados-unq .h1, #acabados-unq p {
@@ -2414,18 +2418,33 @@ RESPONSIVE
         width: 50%;
     }
 
+    #acabados-unq p {
+        order: 1;
+        min-height: 100%;
+        flex-grow: 2;
+    }
+
     #acabados-unq .h1 {
-        transform: rotate(-90deg) translateY(100%);
-        transform-origin: 0 0;
-        display: inline;
+        order: 2;
     }
 
     #acabados-unq .col-6:last-child img {
-        position: absolute;
-        top: initial;
-        left: initial;
-        right: 0;
-        transform: rotate(90deg) translateY(100%);
+        order: 3;
+        transform: rotate(-90deg);
+        transform-origin: top left;
+        transform-style: preserve-3d;
+        left: 50vw;
+        margin-left: 30px;
+        top: 155px;
+    }
+
+    #acabados-unq .h1 {
+        transform: rotate(-90deg);
+        position: relative;
+        left: 1.5em;
+        top: 1em;
+        transform-origin: bottom left;
+        transform-style: preserve-3d;
     }
 
     #diseno-unq .col-6:first-child img.absolute {
@@ -2595,6 +2614,15 @@ RESPONSIVE
         display: none;
     }
 
+    /*Acabados*/
+    #acabados-unq .h1 {
+        left: 2em;
+    }
+
+    #acabados-unq .col-6:last-child img {
+        top: 115px;
+    }
+
     /*Fila Diseno*/
     #diseno-unq ul {
         background-color: black;
@@ -2612,69 +2640,94 @@ RESPONSIVE
         max-width: 300px;
         z-index: -1;
     }
+
     #sala-unq .row .col-1 {
         display: none;
     }
+
     #sala-unq .row .col-6 {
         width: 100%;
         max-width: 100%;
         flex-grow: 2;
     }
+
     #sala-unq .cont-data img {
         bottom: 0;
         top: initial;
     }
+
     #sala-unq .cont-data p:last-child {
         margin: 0;
     }
 }
+
 /*480*/
 @media screen and (max-width: 480px) {
     #contacto {
         height: 30px;
     }
+
     #contacto a {
         height: 30px;
         line-height: 20px;
     }
+
     .h1 {
-    font-size: 2.3rem;
-}
+        font-size: 2.3rem;
+    }
 
-.h2 {
-    font-size: 2rem;
-}
+    .h2 {
+        font-size: 2rem;
+    }
 
-.h3 {
-    font-size: 1.5rem;
-}
-/*FILA ZONAS*/
-#zonas-unq .col-6:first-child {
-    max-width: 60%;
-    width:60%;
-    padding: 0;
-    flex: 0 0 60%;
-    min-height: 100vh;
-    position: relative;
-}
-#zonas-unq .col-6:first-child img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-#zonas-unq .col-6:last-child {
-    max-width:40%;
-    width:40%;
-    padding: 0 0 70px;
-}
-#zonas-unq .linea {
-    margin: 15px 0;
-    height: 7px;
-    width: 24px;
-}
-/*Descripcion*/
- #descripcion-unq .col-7 {
+    .h3 {
+        font-size: 1.5rem;
+    }
+
+    /*Intro*/
+    #inicio-unq .col-3 .cont-info {
+        padding-bottom: 120px;
+    }
+
+    #inicio-unq .btn-bajar {
+        bottom: 60px;
+    }
+
+    #inicio-unq .btn-video {
+        font-size: .7rem;
+    }
+
+    /*FILA ZONAS*/
+    #zonas-unq .col-6:first-child {
+        max-width: 60%;
+        width: 60%;
+        padding: 0;
+        flex: 0 0 60%;
+        min-height: 100vh;
+        position: relative;
+    }
+
+    #zonas-unq .col-6:first-child img, #zonas-unq .col-6:first-child picture {
+        position: absolute;
+        width: 100% !important;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #zonas-unq .col-6:last-child {
+        max-width: 40%;
+        width: 40%;
+        padding: 0 0 70px;
+    }
+
+    #zonas-unq .linea {
+        margin: 15px 0;
+        height: 7px;
+        width: 24px;
+    }
+
+    /*Descripcion*/
+    #descripcion-unq .col-7 {
         background: white;
         width: 75%;
         flex-grow: 2;
@@ -2685,5 +2738,89 @@ RESPONSIVE
     #descripcion-unq .col-7 .h2 {
         margin-left: -25%;
         margin-bottom: 5vh;
+    }
+
+    /*Smart Lofts*/
+    #smart-lofts-unq .row .col-9 {
+        margin-top: 50px;
+    }
+
+    /*Acabados*/
+    #acabados-unq .row {
+        padding-top: 50px;
+    }
+
+    #acabados-unq .col-6:last-child {
+        padding: 15px;
+    }
+
+    #acabados-unq .col-6:last-child img {
+        height: 110px;
+    }
+
+    /*Diseño*/
+    #diseno-unq .contenido .container-fluid .row {
+        margin-left: -15px;
+        margin-right: -15px;
+        flex-direction:row-reverse;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        flex-grow: 2;
+    }
+
+    #diseno-unq .col-6 {
+        padding: 0;
+    }
+    #diseno-unq .col-6:first-child {
+        min-height: 100vh;
+        position: relative;
+        margin: 0;
+        
+        
+    }
+    #diseno-unq .col-6:first-child img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        object-fit:cover;
+
+    }
+
+    #diseno-unq ul {
+        padding: 10px 10px 10px 32px;
+        width: 75vw;
+        margin-left: 0;
+    }
+    #diseno-unq .h1 {
+        position: relative;
+        left: 0.5em;
+        transform: rotate(-90deg) translateY(100%);
+        transform-origin: bottom left;
+        transform-style: preserve-3D;
+    }
+    #diseno-unq li {
+        font-size: .8rem;
+    }
+    /*Ubicacion*/
+    #ubicacion-unq .linea {
+        display: none
+    }
+    #ubicacion-unq .h1 {
+        width: 50%;
+    }
+    #ubicacion-unq ul {
+        padding: 10px 10px 10px 32px;
+        width: 57%;
+        margin-left: -3%;
+        margin-right: ;
+    }
+    #ubicacion-unq ul li:last-child {
+        margin: 0;
+    }
+    #ubicacion-unq .row {
+        padding-top: 50px;
+    }
+    #ubicacion-unq li {
+        font-size: .8rem;
     }
 }
