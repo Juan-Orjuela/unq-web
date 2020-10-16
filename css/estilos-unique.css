@@ -305,7 +305,7 @@ body.fp-viewing-zonas #fp-menu .nav-item.active a {
 }
 
 /*Menu interno*/
-@media and (min-width: 992px) {
+@media screen and (min-width: 992px) {
     .pag-interna #menu {
         transition: all .8s ease;
     }
@@ -1991,6 +1991,18 @@ RESPONSIVE
         left: 80px;
         bottom: 50px;
     }
+
+    /*
+    PAG APTOS
+    */
+    #cont-smart-lofts .cont-info h1 BR {
+        DISPLAY: NONE
+    }
+
+    #cont-smart-lofts .absolute {
+        top: 10%;
+        left: 10%;
+    }
 }
 
 /*1200*/
@@ -2057,6 +2069,17 @@ RESPONSIVE
 
     .pag-interna #fp-menu .nav-item.activo:first-child, .pag-interna #fp-menu:hover .nav-item:first-child {
         height: 90px;
+    }
+
+    /*Pag Smart Lofts*/
+    #cont-smart-lofts {
+        margin-left: 175px;
+        width: calc(100vw - 175px);
+    }
+
+    #cont-smart-lofts .cont-img img {
+        position: absolute;
+        height: 100%;
     }
 }
 
@@ -2325,6 +2348,14 @@ RESPONSIVE
         padding-bottom: 60px
     }
 
+    #footer {
+        display: none;
+    }
+
+    .pag-interna #footer {
+        display: block;
+    }
+
     /*
     =======
     ZONAS
@@ -2415,6 +2446,16 @@ RESPONSIVE
 
     .pag-interna .nav-item.activo .nav-link {
         color: #c3e5e1 !important;
+    }
+
+    /*Pag Smart Lofts*/
+    #cont-smart-lofts {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #cont-smart-lofts .absolute {
+        top: 15%;
     }
 }
 
@@ -2701,11 +2742,11 @@ RESPONSIVE
         width: 100px;
     }
 
-    #footer-responsive .row {
+    #footer-responsive .row, #footer .row {
         flex-wrap: wrap;
     }
 
-    #footer-responsive .row:first-child > div {
+    #footer-responsive .row:first-child > div, #footer .row:first-child > div {
         width: 100%;
         max-width: 100%;
         flex: 0 0 100%;
@@ -2713,12 +2754,37 @@ RESPONSIVE
         margin: 8px 0;
     }
 
-    #footer-responsive .row:last-child {
+    #footer-responsive .row:last-child, #footer .row:last-child {
         margin-top: 20px;
     }
 
-    #footer-responsive .redes a {
+    #footer-responsive .redes a, #footer .redes a {
         margin: 10px;
+    }
+
+    .pag-interna #footer .row:first-child {
+        padding-top: 1rem;
+    }
+
+    .pag-interna #footer .row > div {
+        justify-content: center;
+    }
+
+    .pag-interna #footer .row .col-6 p {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .pag-interna #footer .row .redes {
+        justify-content: center;
+    }
+
+    .pag-interna #footer .row:last-child {
+        margin-top: 0;
+    }
+
+    #cont-smart-lofts .cont-info h1 + p {
+        margin-bottom: 5vh;
     }
 }
 
@@ -2820,14 +2886,33 @@ RESPONSIVE
         margin: 0;
     }
 
+    /*Pag Smart Lofts*/
+    #cont-smart-lofts .dropdown .btn {
+        width: 200px;
+    }
+
+    .dropdown-menu {
+        border-radius: 0;
+        background: #1f1f1f;
+        border: 1px solid white;
+        padding: 0;
+        width: 200px;
+    }
+
+    #cont-smart-lofts h1 {
+        background: #c3e5e1;
+        padding: 30px 60px;
+        margin-left: -60px;
+        color: black;
+    }
 }
 
 /*480*/
 @media screen and (max-width: 480px) {
     #menu .nav-item .nav-link {
-        
         margin-left: 15px;
     }
+
     #contacto {
         height: 30px;
     }
@@ -3025,9 +3110,43 @@ RESPONSIVE
     .slick-prev {
         right: 60px;
     }
+
     .galeria-unique li h3 {
         font-size: 1.2rem;
         bottom: 40px;
         left: 15px;
+    }
+
+    /*Pag Smart Lofts*/
+    #cont-smart-lofts .row {
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    #cont-smart-lofts .cont-img {
+        width: 100%;
+        max-width: 100%;
+        min-height: 50vh;
+    }
+
+    #cont-smart-lofts .cont-info {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        margin-top: -60px;
+    }
+
+    #cont-smart-lofts .cont-info h1 {
+        padding: 30px 15px;
+        margin-left: 0;
+        color: black;
+        margin-bottom: 1em;
+    }
+    #cont-smart-lofts .absolute {
+        display: none;
+    }
+    #cont-smart-lofts .dropdown {
+        width: 200px;
+        margin: 0 auto;
     }
 }
