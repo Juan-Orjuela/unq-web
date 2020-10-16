@@ -2580,9 +2580,9 @@ RESPONSIVE
 
     #descripcion-unq .col-7 {
         background: white;
-        width: 100%;
+        width: 75%;
         flex-grow: 2;
-        max-width: 100%;
+        max-width: 75%;
         padding: 30px;
     }
 
@@ -2626,5 +2626,64 @@ RESPONSIVE
     }
     #sala-unq .cont-data p:last-child {
         margin: 0;
+    }
+}
+/*480*/
+@media screen and (max-width: 480px) {
+    #contacto {
+        height: 30px;
+    }
+    #contacto a {
+        height: 30px;
+        line-height: 20px;
+    }
+    .h1 {
+    font-size: 2.3rem;
+}
+
+.h2 {
+    font-size: 2rem;
+}
+
+.h3 {
+    font-size: 1.5rem;
+}
+/*FILA ZONAS*/
+#zonas-unq .col-6:first-child {
+    max-width: 60%;
+    width:60%;
+    padding: 0;
+    flex: 0 0 60%;
+    min-height: 100vh;
+    position: relative;
+}
+#zonas-unq .col-6:first-child img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#zonas-unq .col-6:last-child {
+    max-width:40%;
+    width:40%;
+    padding: 0 0 70px;
+}
+#zonas-unq .linea {
+    margin: 15px 0;
+    height: 7px;
+    width: 24px;
+}
+/*Descripcion*/
+ #descripcion-unq .col-7 {
+        background: white;
+        width: 75%;
+        flex-grow: 2;
+        max-width: 75%|||;
+        padding: 10px;
+    }
+
+    #descripcion-unq .col-7 .h2 {
+        margin-left: -25%;
+        margin-bottom: 5vh;
     }
 }
