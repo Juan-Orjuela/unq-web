@@ -31,7 +31,8 @@
             <a class="navbar-brand" href="#"><img src="img/logo-unique-menu.svg" alt="Unique Mine"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuHome"
                 aria-controls="menuHome" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"><div class="abrir"></div>
+                <div class="cerrar"></div></span>
             </button>
             <div class="collapse navbar-collapse" id="menuHome">
                 <ul id="fp-menu" class="navbar-nav mr-auto">
@@ -109,8 +110,13 @@
                 <div class="contenido">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-6"><img class="bn-c" src="img/zonas/inicio-zonas-unique.jpg"
-                                    alt="Zonas Unique"> </div>
+                            <div class="col-6">
+                                    <picture>
+                                        <source media="(max-width:768px)" srcset="img/zonas/zonas-imagen-mobile.jpg">
+                                        <source media="(min-width:769px)" srcset="img/zonas/inicio-zonas-unique.jpg">
+                                        <img class="bn-c" src="img/zonas/inicio-zonas-unique.jpg" alt="Zonas Unique" style="width:auto;">
+                                      </picture> 
+                                </div>
                             <div class="col-6"><span class="linea"></span>
                                 <h2 class="h1">Zonas de<br> experiencia</h2>
                                 <p>Aquí las emociones se convierten en experiencias de confort</p>
@@ -163,9 +169,17 @@
                 <div class="contenido">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-6"><img class="bn-c" src="img/acabados/unique-acabados.jpg"
-                                    srcset="img/acabados/unique-acabados.jpg 1x, img/acabados/unique-acabados@2x.jpg 2x"
-                                    alt="Acabados Unique"> </div>
+                            <div class="col-6">
+                                
+
+                                    <picture>
+                                        <source media="(max-width:768px)" srcset="img/acabados/acabados-mobile.jpg">
+                                        <source media="(min-width:769px)" srcset="img/acabados/unique-acabados.jpg">
+                                            <img class="bn-c" src="img/acabados/acabados-mobile.jpg" srcset="img/acabados/unique-acabados.jpg 1x, img/acabados/unique-acabados@2x.jpg 2x"
+                                            alt="Acabados Unique"> 
+                                      </picture> 
+                                
+                                </div>
                             <div class="col-6"><img src="img/acabados/unique-el-3.svg" alt="Unique">
                                 <p>Cada elemento al interior de los Smart Lofts fue planificado, con el propósito de
                                     generar un ambiente de lujo y exclusividad.</p>
@@ -210,7 +224,7 @@
                 <div class="contenido">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-6 col-lg-4">
                                 <span class="linea"></span>
                                 <h2 class="h1">Ubicación</h2>
                                 <p class="amplio">Movilidad inteligente</p>
@@ -240,7 +254,7 @@
                                 <img src="img/unique-simbolo-blanco.svg" alt="Unique">
                             </div>
                             <div class="col-2"></div>
-                            <div class="col-4">
+                            <div class="col-6 col-lg-4">
                                 <h3 class="h3">Visite nuestra<br> sala de ventas</h3>
                                 <div class="cont-data">
                                     <img class="absolute" src="img/acabados/unique-el-3.svg" alt="Unique">
@@ -251,7 +265,43 @@
                                     <p>3168318795 - 3182655477</p>
                                 </div>
                             </div>
-                            <div class="col-3"></div>
+                            <div class="col-1 col-lg-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer-responsive">
+                    <div class="footer">
+                        
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-3"><img src="img/logo-unique-blanco.svg" alt="Unique Mine"></div>
+                                <div class="col-6">
+                                    <p>Contacto: 316 831 8795 - 318 265 5477 <br>uniquemine@mrinversionesinmobiliarias.com</p>
+                                </div>
+                                <div class="col-3">
+                                    <nav class="redes">
+                                        <a href="#" target="_blank"><img src="img/ico-waze.svg" alt="Waze"></a>
+                                        <a href="#" target="_blank"><img src="img/ico-instagram.svg" alt="Instagram"></a>
+                                        <a href="#" target="_blank"><img src="img/ico-facebook.svg" alt="Facebook"></a>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed
+                                        ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                        architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+                                        aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                                        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                                        consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                                        dolore magnam aliquam quaerat voluptatem.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -860,6 +910,7 @@
         var myFullpage = new fullpage('#fullpage-wp', {
             anchors: ['inicio', 'zonas', 'descripcion', 'smart-lofts', 'acabados', 'diseno', 'ubicacion', 'sala'],
             menu: '#fp-menu',
+            scrollOverflow:true,
             licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
         });
         //Desplegar Footer
@@ -896,16 +947,24 @@
 
             var delay = 3000; // time in milliseconds
             $(".capa").addClass('activo');
-            
+
             setTimeout(function () {
                 window.location = link;
             }, delay);
 
         }//redirigir
         //Overflow
-        $(document).ready(function (){
-            $(".capa-overflow").addClass( "cargado" );
+        $(document).ready(function () {
+            $(".capa-overflow").addClass("cargado");
         });
+        //Navegador
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            // true for mobile device
+            document.body.classList.add("brow-mb");
+        } else {
+            // false for not mobile device
+            document.body.classList.add("brow-es");
+        }
     </script>
 
 
