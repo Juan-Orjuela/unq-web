@@ -110,7 +110,7 @@
                             <div class="cont-info">
                                 <a class="pop-registro enlace" data-toggle="modal" data-target="#pop-registro"
                                     href="#">Registro</a>
-                                <a class="enlace" href="https://wa.link/bu3jj5" target="_blank">Whatsapp</a>
+                                <a id="whatsapp-home" class="enlace" href="https://wa.link/bu3jj5" target="_blank">Whatsapp</a>
                                 <a class="btn-video" data-toggle="modal" data-target="#pop-video" href="#">MIRE EL VIDEO
                                     DE LANZAMIENTO</a>
                             </div>
@@ -328,7 +328,7 @@
         <nav id="contacto">
             <ul>
                 <li><a href="#" data-toggle="modal" data-target="#pop-registro">Registro</a></li>
-                <li><a href="https://wa.link/bu3jj5" target="_blank">Whatsapp</a></li>
+                <li><a id="whatsapp-btn" href="https://wa.link/bu3jj5" target="_blank">Whatsapp</a></li>
             </ul>
         </nav><!-- /#contacto -->
         <footer id="footer">
@@ -973,7 +973,20 @@
             document.body.classList.add("brow-es");
         }
     </script>
+<script type="text/javascript">
 
+    $('#formsubmit').click(function() {
+      fbq('track', 'Lead');
+    });
+
+    $('#whatsapp-home').click(function() {
+      fbq('track', 'Contact');
+    });
+
+    $('#whatsapp-btn').click(function() {
+      fbq('track', 'Contact');
+    });
+  </script>
 
 </body>
 
