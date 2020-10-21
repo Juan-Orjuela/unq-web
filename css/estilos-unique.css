@@ -688,7 +688,9 @@ input[type="submit"]:hover {
     mix-blend-mode: multiply;
     pointer-events: none;
 }
-
+.pag-apto .galeria-unique li:before {
+    display: none
+}
 .galeria-unique li img {
     position: absolute;
     width: 100%;

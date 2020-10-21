@@ -828,10 +828,27 @@
             speed: 600,
             infinite: false
         })
-        $(document).on('click', '.slick-next.slick-disabled', function () {
+        //Al acabar galeria
+        $('.slick-prev').addClass('anterior');
+
+        $('.galeria-unique').on('afterChange', function (event, slick, currentSlide) {
+            currentSlide++;
+            var num = slick.slideCount;
+            slick.$prevArrow.removeClass('anterior');
+            if (currentSlide == 1) {
+                slick.$prevArrow.addClass('anterior');
+            }
+            if (currentSlide == num) {
+                slick.$nextArrow.addClass('siguiente');
+            } else {
+                slick.$nextArrow.removeClass('siguiente');
+            }
+        });
+
+        $(document).on('click', '.slick-next.slick-disabled.siguiente', function () {
             fullpage_api.moveSectionDown();
         });
-        $(document).on('click', '.slick-prev.slick-disabled', function () {
+        $(document).on('click', '.slick-prev.slick-disabled.anterior', function () {
             fullpage_api.moveSectionUp();
         });
         //Recorridos
