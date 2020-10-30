@@ -3126,6 +3126,23 @@ RESPONSIVE
         left: 75px;
         bottom: 110px; 
     }
+    /*Formulario*/
+    #pop-registro .col-ico > img{
+        display: none;
+    }
+    #pop-registro .col-ico {
+        width: 29px;
+        padding: 0;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        border-radius: 100%;
+        box-shadow: 0 0 0 3px white;
+
+    }
+    .modal-dialog {
+        margin: 0 auto;
+    }
 }
 
 /*480*/
