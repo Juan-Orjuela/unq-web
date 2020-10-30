@@ -524,7 +524,7 @@ body.fp-viewing-zonas #fp-menu .nav-item.active a {
 #pop-registro .col-form > img {
     position: absolute;
     bottom: 2rem;
-    left: 2rem;
+    right: 2rem;
 }
 
 #pop-registro .col-ico {
@@ -3409,4 +3409,18 @@ RESPONSIVE
         bottom: initial;
         top: 90px;
     }
+}
+.fc-pais {
+    margin-top: 1rem;
+}
+.fc-pais label {
+    color: white;
+    margin-bottom: 1px;
+}
+.form-control textarea {
+    min-width: 100%;
+    background: black;
+    border-color: white;
+    min-height: 120px;
+    padding: .2em .5em;
 }

@@ -283,35 +283,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <h3 class="text-1">Aquí se escribe el<br>
                             significado de grandeza</h3>
                         <!--Inicia Form -->
-                        <form id="formulario-registro" action='https://crm.zoho.com/crm/WebToLeadForm'
-                            name=WebToLeads3437340000025557011 method='POST'
-                            onSubmit='javascript:document.charset="UTF-8"; return checkMandatory3437340000025557011()'
-                            accept-charset='UTF-8'>
-                            <input type='text' style='display:none;' name='xnQsjsdp'
-                                value='e753be965f73a8601853611ba253212557baa06c27dbb32fadf4553873ebdff1'></input>
-                            <input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
-                            <input type='text' style='display:none;' name='xmIwtLD'
-                                value='89e5f01fdec4ce32ff883522615b113ae61c376d076f92f97f38bc2f9ec5b012'></input>
-                            <input type='text' style='display:none;' name='actionType' value='TGVhZHM='></input>
-                            <input type='text' style='display:none;' name='returnURL'
-                                value='https://uniquemine.co/landing/thankyou.html'>
-                            </input>
+                        <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads3437340000026724007 method='POST'
+		onSubmit='javascript:document.charset="UTF-8"; return checkMandatory3437340000026724007()'
+		accept-charset='UTF-8'>
+		<input type='text' style='display:none;' name='xnQsjsdp'
+			value='e753be965f73a8601853611ba253212557baa06c27dbb32fadf4553873ebdff1'></input>
+		<input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
+		<input type='text' style='display:none;' name='xmIwtLD'
+			value='89e5f01fdec4ce32ff883522615b113a27e290862a5c784df1fb8dc23ad51d79'></input>
+		<input type='text' style='display:none;' name='actionType' value='TGVhZHM='></input>
+		<input type='text' style='display:none;' name='returnURL' value='https://uniquemine.co/landing/thankyou.html'> </input>
                             <!-- Do not remove this code. -->
                             <!-- Nombre -->
-                            <div class="form-control"><label for="nombre"></label><input id='nombre' type='text'
+                            <div class="form-control"><label for="First Name"></label><input id='First Name' type='text'
                                     maxlength='40' name='First Name' placeholder="Nombre*" /></div>
                             <!-- Apellido -->
-                            <div class="form-control"><label for="apellido"></label><input id='apellido' type='text'
+                            <div class="form-control"><label for="Last Name"></label><input id='Last Name' type='text'
                                     maxlength='80' name='Last Name' placeholder="Apellido*" /></div>
                             <!-- Email -->
-                            <div class="form-control"><label for="correo"></label><input id='correo' type='email'
+                            <div class="form-control"><label for="Email"></label><input id='Email' type='email'
                                     maxlength='100' name='Email' ftype='email' placeholder="E-mail*" /></div>
                             <!-- Tel -->
-                            <div class="form-control"><label for="telefono"></label><input id='telefono' type='tel'
+                            <div class="form-control"><label for="Mobile"></label><input id='Mobile' type='tel'
                                     maxlength='30' name='Mobile' placeholder="Teléfono*" /></div>
                             <!-- Pais -->
-                            <div class="form-control"><label for="pais"></label>
-                                <select name='LEADCF2' placeholder="País de residencia*">
+                            <div class="form-control fc-pais"><label for="LEADCF2">País de residencia:</label>
+                                <select class='zcwf_col_fld_slt' id='LEADCF2' name='LEADCF2' placeholder="País de residencia">
                                     <option value='-None-'>-Selecciona-</option>
                                     <option value='Afganistan'>Afganistan</option>
                                     <option value='Africa&#x20;del&#x20;Sur'>Africa del Sur</option>
@@ -637,6 +634,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <option value='Zimbabue'>Zimbabue</option>
                                 </select>
                             </div>
+                            <!-- Mensaje-->
+                            <div class='form-control'>
+                                <label for='Description'></label>
+                                <textarea id='Description' name='Description' placeholder="Mensaje"></textarea>
+                            </div>
                             <!-- Aceptar -->
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="politica-check">
@@ -690,6 +692,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </select></td>
                                 <td style='width:30%;'></td>
                             </div>
+                            
                             <!-- Enviar -->
                             <input id='formsubmit' type='submit' value='ENVIAR'></input>
                             <script>
@@ -714,10 +717,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     }
                                     return true;
                                 }
-
-                                function checkMandatory3437340000025557011() {
+                    
+                                function checkMandatory3437340000026724007() {
                                     for (i = 0; i < mndFileds.length; i++) {
-                                        var fieldObj = document.forms['WebToLeads3437340000025557011'][mndFileds[i]];
+                                        var fieldObj = document.forms['WebToLeads3437340000026724007'][mndFileds[i]];
                                         if (fieldObj) {
                                             if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length == 0) {
                                                 if (fieldObj.type == 'file') {
@@ -749,27 +752,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         }
                                     }
                                     if (!validateEmail()) { return false; }
-
+                                    document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
                                 }
-
-                            </script>
-                            <input type='hidden' name='eo' value='14f4ec16431e0686150daa43f3210513' /> <input
-                                type='hidden' name='te' value='true' /><img
-                                id='tr_img_89e5f01fdec4ce32ff883522615b113ae61c376d076f92f97f38bc2f9ec5b012'
-                                src='https://crm.zohopublic.com/crm/WebFormAnalyticsServlet?rid=89e5f01fdec4ce32ff883522615b113ae61c376d076f92f97f38bc2f9ec5b012gide753be965f73a8601853611ba253212557baa06c27dbb32fadf4553873ebdff1gida378f81585080d3b6fb1acbec6638b71gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513'
-                                style='display: none;' />
-                            <script>
-                                if (typeof wfTRKey == 'undefined') {
-                                    wfTRKey = {};
-                                } wfTRKey['url_89e5f01fdec4ce32ff883522615b113ae61c376d076f92f97f38bc2f9ec5b012'] = 'https://crm.zohopublic.com/crm/WebFormAnalyticsServlet?rid=89e5f01fdec4ce32ff883522615b113ae61c376d076f92f97f38bc2f9ec5b012gide753be965f73a8601853611ba253212557baa06c27dbb32fadf4553873ebdff1gid364f49863aa1c6f080988c8e111a90b8gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513';
-                                wfTRKey['rs_89e5f01fdec4ce32ff883522615b113ae61c376d076f92f97f38bc2f9ec5b012'] = false; function sf(ev) {
-                                    var te = ev.target ? ev.target : ev.srcElement;
-                                    var nd = te.nodeName ? te.nodeName.toLowerCase() : '';
-                                    var fm; if (te.form) { fm = te.form.elements.xmIwtLD.value; } if (fm && !wfTRKey['rs_' + fm] && ((nd == 'input' && te.type != 'file') || (nd == 'input' && te.type == 'file' && ev.type == 'click') || nd == 'select' || nd == 'textarea' || nd == 'div')) { document.getElementById('tr_img_' + fm).setAttribute('src', wfTRKey['url_' + fm]); wfTRKey['rs_' + fm] = true }
+                    
+                                function tooltipShow(el) {
+                                    var tooltip = el.nextElementSibling;
+                                    var tooltipDisplay = tooltip.style.display;
+                                    if (tooltipDisplay == 'none') {
+                                        var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
+                                        for (i = 0; i < allTooltip.length; i++) {
+                                            allTooltip[i].style.display = 'none';
+                                        }
+                                        tooltip.style.display = 'block';
+                                    } else {
+                                        tooltip.style.display = 'none';
+                                    }
                                 }
-                                if (document.addEventListener) { document.addEventListener('click', sf); document.addEventListener('change', sf); } else { document.attachEvent('onclick', sf); document.attachEvent('onchange', sf); }
-
                             </script>
+                            <!-- Do not remove this --- Analytics Tracking code starts -->
+                            <script id='wf_anal'
+                                src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=89e5f01fdec4ce32ff883522615b113a27e290862a5c784df1fb8dc23ad51d79gide753be965f73a8601853611ba253212557baa06c27dbb32fadf4553873ebdff1gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513'></script>
+                            <!-- Do not remove this --- Analytics Tracking code ends. -->
                         </form><!-- /#formulario-registro -->
                         <img src="img/unique-el-1.svg" alt="Elemento Unique">
                     </div>
