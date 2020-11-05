@@ -3440,4 +3440,12 @@ RESPONSIVE
     border-color: white;
     min-height: 120px;
     padding: .2em .5em;
+    color: white;
+    
+}
+.form-control textarea:focus {
+    border-radius: 0 !important;
+    box-shadow: none;
+    outline: none;
+    border-color: #c3e5e1;
 }
